@@ -10,5 +10,4 @@ public class TesteJenkinsApplication {
 		SpringApplication.run(TesteJenkinsApplication.class, args);
 	}
 
-
 }
