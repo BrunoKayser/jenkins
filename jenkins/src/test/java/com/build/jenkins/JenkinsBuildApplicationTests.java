@@ -1,13 +1,21 @@
 package com.build.jenkins;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@SpringBootTest
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@ExtendWith(MockitoExtension.class)
 class JenkinsBuildApplicationTests {
 
+	@InjectMocks
+	JenkinsBuildApplication application;
+
 	@Test
-	void contextLoads() {
+	void shouldAssertName() {
+		assertEquals("Brunão", application.returnName());
 	}
 
 }

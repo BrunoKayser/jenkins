@@ -7,8 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JenkinsBuildApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Passou aqui");
 		SpringApplication.run(JenkinsBuildApplication.class, args);
+	}
+
+	public String returnName(){
+		return "Brunão";
 	}
 
 }
