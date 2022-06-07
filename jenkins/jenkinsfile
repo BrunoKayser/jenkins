@@ -5,20 +5,18 @@ pipeline {
         stage('Build'){
             steps {
                 git( 'https://github.com/BrunoKayser/jenkins.git')
-                //sh '.mvnw clean compile'
-                bat '.\mvnw clean compile'
+                sh '.mvnw clean compile'
+                //bat '.\mvnw clean compile'
             }
         }
         stage('test') {
             steps {
-                //sh '.mvnw test'
-                bat '.\mvnw test'
+                sh '.mvnw test'
+                //bat '.\mvnw test'
             }
 
 //             post {
-//                 always {
-//                     junit ''
-//                 }
+//
 //             }
         }
     }
